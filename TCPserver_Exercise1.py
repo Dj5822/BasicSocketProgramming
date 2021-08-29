@@ -2,6 +2,7 @@ import socket
 
 server_ip = 'localhost'
 port = 12000
+input_file_name = "Jellyfish.mp4"
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 # Bind and start the server.
@@ -14,7 +15,7 @@ while True:
     print("Got connection from {}".format(addr))
 
     # read bytes from the file.
-    with open("Jellyfish.mp4", "rb") as file:
+    with open(input_file_name, "rb") as file:
         data = b''.join(file.readlines())
         file.close()
 

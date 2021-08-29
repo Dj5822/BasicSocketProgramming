@@ -2,6 +2,7 @@ import socket
 
 server_ip = 'localhost'
 port = 12000
+output_file_name = "receivedVid.mp4"
 s = socket.socket()
 
 try:
@@ -20,7 +21,7 @@ try:
             video_data.append(incoming_data)
 
     # write bytes back into an mp4 file.
-    with open("receivedVid.mp4", "wb") as file:
+    with open(output_file_name, "wb") as file:
         file.write(b''.join(video_data))
         file.close()
 
