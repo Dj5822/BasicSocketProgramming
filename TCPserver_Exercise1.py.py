@@ -1,15 +1,12 @@
 import socket
 
+server_ip = 'localhost'
 port = 12000
-
 s = socket.socket()
-print("socket successfully created.")
 
-s.bind(('', port))
-print("socket binded to {}".format(port))
-
+s.bind((server_ip, port))
 s.listen(5)
-print("Server stated listening localhost: {}".format(port))
+print("Server started listening {}: {}".format(server_ip, port))
 
 while True:
     c, addr = s.accept()
