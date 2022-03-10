@@ -1,2 +1,2 @@
 # BasicSocketProgramming
-For Networks and Security Assignment 1
+Used for learning about sockets.
